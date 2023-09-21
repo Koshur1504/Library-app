@@ -55,7 +55,9 @@ function App() {
           onChange={handleSearch}
           value={query}
         />
+        
       )}
+      
       <div className="container">
         {modal ? (
           <Modal toggleModal={toggleModal} modalData={modalData} setModal={setModal}/>
@@ -92,7 +94,7 @@ function App() {
           />
         </div>
       )}
-      {!modal && error && <div className="error">error</div>}
+      {!modal && error && <div className="error">{error}</div>}
     </div>
   );
 }

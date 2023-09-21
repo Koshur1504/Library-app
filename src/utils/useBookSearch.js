@@ -42,7 +42,8 @@ const useBookSearch = (query, pageNumber) => {
       })
       .catch((e) => {
         if (axios.isCancel(e)) return;
-        setError(true);
+        // setError(true);
+        setError(e);
       });
     return () => cancel();
   }, [query, pageNumber]);
